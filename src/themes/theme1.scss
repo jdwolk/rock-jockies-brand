@@ -1,0 +1,31 @@
+$color-primary-0: #5E503F;
+$color-primary-1: #A9927D;
+$color-primary-2: #E85D75;
+$color-primary-3: #C76D7E;
+$color-primary-4: #F2F4F3;
+
+.bg-color0 {
+  background-color: $color-primary-0;
+}
+.bg-color1 {
+  background-color: $color-primary-1;
+}
+.bg-color2 {
+  background-color: $color-primary-2;
+}
+.bg-color3 {
+  background-color: $color-primary-3;
+}
+.bg-color4 {
+  background-color: $color-primary-4;
+}
+.has-background-color {
+  background-color: $color-primary-4;
+}
+.has-title-text-color {
+  color: $color-primary-0;
+}
+.has-subtitle-text-color {
+  color: $color-primary-1;
+}
+

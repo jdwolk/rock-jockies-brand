@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100%
+}
+
+.App {
+}
+
+.square0 {
+  grid-area: square0;
+  min-height: 130px;
+}
+
+.square1 {
+  grid-area: square1;
+  min-height: 130px;
+}
+
+.square2 {
+  grid-area: square2;
+  min-height: 130px;
+}
+
+.square3 {
+  grid-area: square3;
+  min-height: 130px;
+}
+
+.square4 {
+  grid-area: square4;
+  min-height: 130px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  text-align: center;
+
+  .fancy-link {
+    position: relative;
+    top: 1.5vh;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.theme-squares {
+  display: grid;
+  grid-template-areas: "square0 square1 square2 square3 square4";
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 20px;
+  background-color: white;
+  /*margin-top: 7vh;*/
+  margin-top: 4vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 3vh;
+}
+
+.content {
+  text-align: left;
+  height: 80vh;
+  margin-bottom: 50px;
+}
+
+.content-row {
+  padding: 40px;
+  margin-bottom: 20px;
+  min-height: 30vh;
+}
+
+.content-row.compare-to {
+  padding-top: 10vh;
+}
+
+.content-row:last-child {
+  margin-bottom: 25vh;
+}
+
+.form-fields {
+  padding-bottom: 40px;
+}
+
+.content-row-content {
+  h1 {
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+}
+
+.fancy-input {
+  text-align: left;
+  width: 90%;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  padding-bottom: 2px;
+  font-weight: 600;
+}
+
+.fancy-input:focus, .fancy-input:hover {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 0px;
+}
+
+.fancy-button {
+  background: transparent;
+  margin-right: 15px;
+  cursor: pointer;
+  width: 15vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.fancy-button:focus {
+  outline: 0 !important;
+  background-color: red;
+}
+
+.fancy-link {
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.fancy-link:hover {
+  color: white;
+}
+
+.fancy-link.active {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 0.5vh;
+}
+
+.fancy-link.active:hover {
+  border-bottom: 1px solid white;
+}
+
+.has-flash {
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+
+.fancy-button.flashing {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.fancy-button.not-flashing {
+  background-color: transparent;
+}
+
+.chooser-overlay {
+  width: 50%;
+  height: 26vh;
+  position: fixed;
+  top: 30vh;
+  right: 0;
+  float: right;
+  background-color:rgba(0, 0, 0, 0.08);
+  padding-top: 5vh;
+  padding-left: 3vw;
+  padding-bottom: 5vh;
+}
+
+@media (max-width: 899px) {
+  .App {
+    text-align: center;
+  }
+
+  .square0 {
+    grid-area: square0;
+    min-height: 70px;
+  }
+
+  .square1 {
+    grid-area: square1;
+    min-height: 70px;
+  }
+
+  .square2 {
+    grid-area: square2;
+    min-height: 70px;
+  }
+
+  .square3 {
+    grid-area: square3;
+    min-height: 70px;
+  }
+
+  .square4 {
+    grid-area: square4;
+    min-height: 70px;
+  }
+
+  .chooser-overlay {
+    width: 100%;
+    top: 55vh;
+  }
+
+  .content-row.compare-to {
+    min-height: 55vh;
+  }
+
+  .content-row.compare-to:first-child {
+    height: 60vh;
+  }
+
+  .content-row:last-child {
+    margin-bottom: 10vh;
+  }
+
+  .content-row-content {
+    text-align: center;
+  }
+  .fancy-input {
+    text-align: center;
+  }
+  .fancy-button {
+    width: 40vw;
+  }
+
+  @media (max-height: 600px) {
+    .navbar {
+      height: 7vh;
+    }
+
+    .fancy-link {
+      top: 2vh;
+    }
+
+    .chooser-overlay {
+      top: 50vh;
+      height: 30vh;
+      padding-top: 3vh;
+      padding-bottom: 6vh;
+    }
+
+    .content-row.compare-to {
+      height: 65vh;
+      padding-top: 3vh;
+    }
+
+    .content-row.compare-to:first-child {
+      padding-top: 3vh;
+    }
+
+    .content-row-content {
+      h2 {
+        margin-bottom: 0;
+      }
+
+      h4: {
+        margin-top: 1.5vh;
+        margin-bottom: 1.5vh;
+      }
+    }
+  }
+}
